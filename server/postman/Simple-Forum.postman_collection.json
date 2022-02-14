@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "77674215-a206-4820-be5b-ba9a51576d1d",
+		"name": "Simple-Forum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "forum",
+			"item": [
+				{
+					"name": "Get forums",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/forums",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"forums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get forums by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/forums/1",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"forums",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get forums by username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/forums?username=James",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"forums"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "James"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a forum",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/forums",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"forums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a forum",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/forums/1",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"forums",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a forum",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/forums/1",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"forums",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "member",
+			"item": [
+				{
+					"name": "Signin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/member/signin",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"member",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/member/signup",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"member",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit the user information",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/member/edit/1234",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"member",
+								"edit",
+								"1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete the user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/member/dropout/1234",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"member",
+								"dropout",
+								"1234"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "Get all comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/comments/123",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"comments",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/comments/123",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"comments",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit the comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/comments/1234",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"comments",
+								"1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete the comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/comments/1234",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"comments",
+								"1234"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

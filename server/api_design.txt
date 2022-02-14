@@ -1,0 +1,19 @@
+Forum REST API Design
+
+GET /forums
+GET /forums?username=username
+GET /forums/:forumid
+POST /forums
+PUT /forums/:forumid
+DELETE /forums/:forumid
+
+GET /member/signin
+POST /member/signup
+PUT /member/edit/:userid
+DELETE /member/dropout/:userid
+
+GET /comment/:forumid
+POST /comment/:forumid
+PUT /comment/:commentid
+DELETE /comment/:commentid
+

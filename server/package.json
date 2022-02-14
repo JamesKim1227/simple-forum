@@ -1,0 +1,30 @@
+{
+  "name": "simple_forum_server",
+  "version": "1.0.0",
+  "description": "simple forum server",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesKim1227/simple-forum.git"
+  },
+  "author": "James Kim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JamesKim1227/simple-forum/issues"
+  },
+  "homepage": "https://github.com/JamesKim1227/simple-forum#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "helmet": "^5.0.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
