@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "be8f2208-2e1f-4d6e-b19d-12bcc6f1c628",
+		"_postman_id": "37306330-bc6e-469d-bb26-c90e82c8ffec",
 		"name": "Simple-Forum",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -140,7 +140,7 @@
 			]
 		},
 		{
-			"name": "member",
+			"name": "auth",
 			"item": [
 				{
 					"name": "Signin",
@@ -148,12 +148,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base}}/member/signin",
+							"raw": "{{base}}/auth/signin",
 							"host": [
 								"{{base}}"
 							],
 							"path": [
-								"member",
+								"auth",
 								"signin"
 							]
 						}
@@ -166,12 +166,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{base}}/member/signup",
+							"raw": "{{base}}/auth/signup",
 							"host": [
 								"{{base}}"
 							],
 							"path": [
-								"member",
+								"auth",
 								"signup"
 							]
 						}
@@ -184,13 +184,12 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "{{base}}/member/edit/1234",
+							"raw": "{{base}}/auth/1234",
 							"host": [
 								"{{base}}"
 							],
 							"path": [
-								"member",
-								"edit",
+								"auth",
 								"1234"
 							]
 						}
@@ -203,13 +202,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{base}}/member/dropout/1234",
+							"raw": "{{base}}/auth/1234",
 							"host": [
 								"{{base}}"
 							],
 							"path": [
-								"member",
-								"dropout",
+								"auth",
 								"1234"
 							]
 						}

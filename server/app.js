@@ -6,7 +6,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 
 import forumRouter from './router/forum.js';
-import memberRouter from './router/member.js';
+import authRouter from './router/auth.js';
 import commentRouter from './router/comment.js';
 
 const app = express();
@@ -18,7 +18,7 @@ app.use(helmet());
 app.use(morgan('tiny'));
 
 app.use('/forums', forumRouter);
-app.use('/members', memberRouter);
+app.use('/auth', authRouter);
 app.use('/comments', commentRouter);
 
 
