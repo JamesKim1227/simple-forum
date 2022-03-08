@@ -5,32 +5,37 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 
-import forumRouter from './router/forum.js';
-import authRouter from './router/auth.js';
-import commentRouter from './router/comment.js';
+import forumRouter from './routes/forum.js';
+import authRouter from './routes/auth.js';
+import commentRouter from './routes/comment.js';
+
+import { config } from './config/config.js';
+import { sequelize } from './db/connection.js';
+import { InvalidUrlRequest, serverError } from './routes/error.js';
+
 
 const app = express();
-const PORT = 8081;
 
 app.use(express.json());
 app.use(cors());
 app.use(helmet());
 app.use(morgan('tiny'));
 
-app.use('/forums', forumRouter);
 app.use('/auth', authRouter);
-app.use('/comments', commentRouter);
+app.use('/forums', forumRouter);
+app.use('/comments', commentRouter); // Not implemented yet
 
+app.use(InvalidUrlRequest);
+app.use(serverError);
 
-// invalid url handler
-app.use((req, res, next) => {
-  res.sendStatus(404);
+// Sync all models to DB
+sequelize.sync()
+.then(() => {
+  // Listen to connections
+  app.listen(config.host.port, () => {
+    console.log(`Listening on port(${config.host.port})`);
+  });
+})
+.catch((err) => {
+  console.log(`Error occured(${err})`);
 });
-
-// error handler
-app.use((error, req, res, next) => {
-  console.error(error);
-  res.sendStatus(500);
-});
-
-app.listen(PORT);

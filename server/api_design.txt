@@ -7,11 +7,11 @@ POST /forums
 PUT /forums/:forumid
 DELETE /forums/:forumid
 
-POST /auth/signin
 POST /auth/signup
+POST /auth/signin
 POST /auth/me
-PUT /auth/:userid
-DELETE /auth/:userid
+PUT /auth/edit
+DELETE /auth/dropout
 
 GET /comment/:forumid
 POST /comment/:forumid
